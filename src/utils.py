@@ -1,6 +1,7 @@
 # Utils contains common functionality which all the entire project can use
 import os
 import sys
+from sklearn.base import clone
 
 import numpy as np 
 import pandas as pd
@@ -27,34 +28,37 @@ def save_object(file_path, obj):
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     try:
         report = {}
+        trained_models = {}
 
         for i in range(len(list(models))):
             model = list(models.values())[i]
+            model_name = list(models.keys())[i]
             para=param[list(models.keys())[i]]
 
-            gs = GridSearchCV(model, para, cv=3, n_jobs=1)
+            gs = GridSearchCV(model, para, cv=3, n_jobs=1,refit = False)
+            # Refit = False it does not train a final model it only computes best_params 
             gs.fit(X_train,y_train)
 
-            model.set_params(**gs.best_params_)
-            model.fit(X_train,y_train)
+            # Hyperparameter search only
+            best_model = clone(model)
+            best_model.set_params(**gs.best_params_)
+            best_model.fit(X_train, y_train)
 
             # ** → Python’s “dictionary unpacking” operator. It expands the dictionary into keyword arguments.
             # ** = “Take all key-value pairs from a dictionary and pass them as named parameters.”
             # If gs.best_params_ is: {"max_depth": 10, "n_estimators": 200}
             # eg python does model.set_params(max_depth=10, n_estimators=200)
-
-            y_train_pred = model.predict(X_train)
-
-            y_test_pred = model.predict(X_test)
-
-            train_model_score = r2_score(y_train, y_train_pred)
-
-            test_model_score = r2_score(y_test, y_test_pred)
+            
+            y_test_pred = best_model.predict(X_test)
+            
+            test_score = r2_score(y_test, y_test_pred)
+            
+            trained_models[model_name] = best_model
             # test score are model prediction
-            report[list(models.keys())[i]] = test_model_score
+            report[list(models.keys())[i]] = test_score
 
-        return report
-
+        return report, trained_models
+    
     except Exception as e:
         raise CustomException(e, sys)
     
@@ -65,6 +69,3 @@ def load_object(file_path):
 
     except Exception as e:
         raise CustomException(e,sys)
-
-
-

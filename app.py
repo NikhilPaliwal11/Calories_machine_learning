@@ -1,3 +1,6 @@
+import sys
+print("Python version:", sys.version)
+
 from flask import Flask, render_template, request
 import pandas as pd
 import os

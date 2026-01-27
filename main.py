@@ -25,8 +25,8 @@ if __name__ == "__main__":
         data_transformation = DataTransformation()
         logging.info("Data transformation started")
         train_arr, test_arr, _ = data_transformation.initiate_data_transformation(
-            train_data, test_data
-        )
+            train_data, test_data)
+        
         logging.info("Data transformation completed")
 
         logging.info("Model training started")

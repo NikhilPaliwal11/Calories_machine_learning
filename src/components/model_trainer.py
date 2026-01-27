@@ -62,7 +62,7 @@ class ModelTrainer:
             logging.info("Training model and finding model which will best fit")
             # Now we see which model is performing well
             # Model report we create a dictionary. Evaluate model is a function we create in utils
-            model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
+            model_report, trained_models = evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
                                              models=models,param=params)
             
             ## To get best model score from dict
@@ -75,7 +75,7 @@ class ModelTrainer:
                 list(model_report.values()).index(best_model_score)
             ]
 
-            best_model = models[best_model_name]
+            best_model = trained_models[best_model_name]
             # eg if best_model_name = "Random Forest" then best_model = RandomForestRegressor()
 
             if best_model_score<0.6:
@@ -87,6 +87,7 @@ class ModelTrainer:
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
+            
             logging.info("model pickle file saved")
             predicted=best_model.predict(X_test)
 

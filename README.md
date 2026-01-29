@@ -40,11 +40,12 @@ Built an end-to-end machine learning application using **Python** to predict cal
 - Heart Rate  
 - Body Temperature
   
-<img width="1902" height="969" alt="Screenshot 2026-01-29 202856" src="https://github.com/user-attachments/assets/102f4666-b175-4dbc-be52-251858d13643" />
-<img width="1
+<img width="1891" height="1006" alt="Screenshot 2026-01-29 202727" src="https://github.com/user-attachments/assets/adeb23bb-29bc-4507-a626-ab14ef5791ee" />
 
-https://github.com/user-attachments/assets/93a4635c-dd20-45df-8ab2-0a90e87cb8f8
 
-600" height="853" alt="Screenshot 2026-01-29 202800" src="https://github.com/user-attachments/assets/c7141e98-9f32-49f5-85b6-6adc763d04f9" />
+<img width="1600" height="853" alt="Screenshot 2026-01-29 202800" src="https://github.com/user-attachments/assets/a9adbc5d-943c-4c6d-84c7-6866ecb3baf1" />
+
+
+https://github.com/user-attachments/assets/339f45b9-0091-479b-86ce-25c271ee17e2
 
 

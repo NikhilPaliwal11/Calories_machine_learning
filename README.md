@@ -39,16 +39,19 @@ Built an end-to-end machine learning application using **Python** to predict cal
 - Workout Duration  
 - Heart Rate  
 - Body Temperature
-  
+
+# Code
 <img width="1891" height="1006" alt="Screenshot 2026-01-29 202727" src="https://github.com/user-attachments/assets/adeb23bb-29bc-4507-a626-ab14ef5791ee" />
 
+# App Interface
+<img width="1600" height="853" alt="Screenshot 2026-01-29 202800" src="https://github.com/user-attachments/assets/d7252aab-a6cc-4ca2-9a09-c107493c9c72" />
 
-<img width="1600" height="853" alt="Screenshot 2026-01-29 202800" src="https://github.com/user-attachments/assets/a9adbc5d-943c-4c6d-84c7-6866ecb3baf1" />
+# Prediction
+<img width="1666" height="840" alt="Screenshot 2026-01-29 202810" src="https://github.com/user-attachments/assets/13ec3fb8-a055-4d1c-9c09-3970168a0cbc" />
 
 ## Render Deployment
 
 https://github.com/user-attachments/assets/8217d44c-ad1c-4db1-a249-e84e193865df
-
 
 ## Microsoft Azure Deployment
 

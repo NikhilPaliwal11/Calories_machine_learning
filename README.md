@@ -16,7 +16,7 @@ Built an end-to-end machine learning application using **Python** to predict cal
 - Performed **hyperparameter tuning using GridSearchCV** to select the best-performing model
 - Built a **Flask web application** for real-time calorie predictions
 - Learned **Docker fundamentals** and containerized the application
-- Deployed the Dockerized application on **Microsoft Azure Web App** using another git repository.
+- Deployed the Dockerized application on **Microsoft Azure Web App** shown in another git repository.
 - Deployed the live web application on **Render** for public access
 
 ---

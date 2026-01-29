@@ -45,6 +45,7 @@ Built an end-to-end machine learning application using **Python** to predict cal
 
 <img width="1600" height="853" alt="Screenshot 2026-01-29 202800" src="https://github.com/user-attachments/assets/a9adbc5d-943c-4c6d-84c7-6866ecb3baf1" />
 
+## Microsoft Azure Deployment
 
 https://github.com/user-attachments/assets/339f45b9-0091-479b-86ce-25c271ee17e2
 

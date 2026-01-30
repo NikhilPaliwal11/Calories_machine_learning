@@ -2,6 +2,7 @@
 
 Built an end-to-end machine learning application using **Python** to predict calories burnt during a workout based on biological and workout-related features.
 
+App Link : https://calories-burnt-machine-learning.onrender.com
 ---
 
 ## 🚀 Project Highlights
